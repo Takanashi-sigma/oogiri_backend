@@ -15,7 +15,7 @@ class Base(DeclarativeBase):
 
 engine = create_async_engine(
     DATABASE_URL,
-    echo=True,              # 本番はFalse推奨
+    echo=False,              # 本番はFalse推奨
     pool_pre_ping=True,     # 死んだ接続を再利用しない
     pool_recycle=1800,      # 長時間接続を定期更新
 )
